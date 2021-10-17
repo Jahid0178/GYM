@@ -1,13 +1,20 @@
-.banner-container {
-  background-color: #F36100;
+.home-container {
+  width: 100%;
 }
 
-.icons {
-  color: #fff;
-  padding: 10px;
-  font-size: 20px;
+.carousel-container {
+  width: 100%;
 }
 
-.icons:hover {
-  color: #f2f2f2;
+.img {
+  height: 95vh;
+  object-fit: cover;
+}
+
+.short-text {
+  color: #F36100;
+}
+
+.carousel-heading {
+  font-size: 80px;
 }

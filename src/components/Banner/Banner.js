@@ -1,43 +1,56 @@
-import {
-  faFacebook,
-  faGooglePlusG,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Carousel } from "react-bootstrap";
+import img1 from "../../images/home/home-img1.jpg";
+import img2 from "../../images/home/home-img2.jpg";
+import img3 from "../../images/home/home-img3.jpg";
 import "./Banner.css";
 
 const Banner = () => {
-  const envelop = <FontAwesomeIcon icon={faEnvelope} />;
-  const phone = <FontAwesomeIcon icon={faPhoneAlt} />;
-  const facebook = <FontAwesomeIcon icon={faFacebook} />;
-  const twitter = <FontAwesomeIcon icon={faTwitter} />;
-  const googlePlus = <FontAwesomeIcon icon={faGooglePlusG} />;
-  const youtube = <FontAwesomeIcon icon={faYoutube} />;
   return (
-    <div className="banner-container p-1 text-white d-flex justify-content-between">
-      <div>
-        <h5 className="d-inline">{envelop} Contact@gym.com</h5>
-        <h5 className="d-inline ms-2">{phone} Troll Free: +1 212-212-2376</h5>
-      </div>
-      <div>
-        <Link to="#" className="icons">
-          {facebook}
-        </Link>
-        <Link to="#" className="icons">
-          {twitter}
-        </Link>
-        <Link to="#" className="icons">
-          {googlePlus}
-        </Link>
-        <Link to="#" className="icons">
-          {youtube}
-        </Link>
-      </div>
+    <div className="home-container">
+      <Carousel className="carousel-container" controls={false}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 img-fluid img"
+            src={img1}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h1 className="carousel-heading">
+              Be <span className="short-text">Strong</span> Training Hard
+            </h1>
+            <p className="fs-2">Shape Your Body</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 img-fluid img"
+            src={img2}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            <h1 className="carousel-heading">
+              Be <span className="short-text">Strong</span> Training Hard
+            </h1>
+            <p className="fs-2">Shape Your Body</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 img-fluid img"
+            src={img3}
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            <h1 className="carousel-heading">
+              Be <span className="short-text">Strong</span> Training Hard
+            </h1>
+            <p className="fs-2">Shape Your Body</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 };
