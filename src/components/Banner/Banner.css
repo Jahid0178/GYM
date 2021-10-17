@@ -1,0 +1,13 @@
+.banner-container {
+  background-color: #F36100;
+}
+
+.icons {
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.icons:hover {
+  color: #f2f2f2;
+}

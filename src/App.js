@@ -6,11 +6,13 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import NavBar from "./components/Shared/NavBar/NavBar";
 import NotFound from "./components/NotFound/NotFound";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   return (
     <div>
       <Router>
+        <Banner></Banner>
         <NavBar></NavBar>
         <Switch>
           <Route exact path="/">
