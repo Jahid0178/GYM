@@ -26,7 +26,7 @@ const NavBar = () => {
               <NavLink className="nav-link" to="/shop">
                 Shop
               </NavLink>
-              {user.displayName ? (
+              {user.email ? (
                 <NavLink className="nav-link" to="#" onClick={logOut}>
                   Log Out
                 </NavLink>

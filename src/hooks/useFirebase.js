@@ -70,7 +70,6 @@ const useFirebase = () => {
   };
 
   const processAccount = () => {
-    console.log("this" + email);
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
