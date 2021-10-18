@@ -1,0 +1,17 @@
+.benefits-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background-color: #0d0d0e;
+  color: #fff;
+}
+
+.benefits-heading {
+  color: #F36100;
+}
+
+.icon {
+  font-size: 50px;
+  color: #F36100;
+}

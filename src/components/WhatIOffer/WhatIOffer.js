@@ -9,9 +9,7 @@ const WhatIOffer = () => {
   return (
     <div className="offer-container p-5">
       <Container>
-        <h1 className="offer-heading py-3 text-center text-white mb-3">
-          What I Offer
-        </h1>
+        <h1 className="offer-heading py-3 text-center mb-3">What I Offer</h1>
         <Row>
           <Col>
             <Card style={{ width: "18rem" }} className="card-container">

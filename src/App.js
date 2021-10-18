@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound/NotFound";
 import TopHeader from "./components/TopHeader/TopHeader";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import Footer from "./components/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );

@@ -1,0 +1,10 @@
+.about-me-container {
+  width: 100%;
+  background-color: #F36100;
+}
+
+.about-me-heading {
+  color: #F36100;
+  font-size: 52px;
+  background: #fff;
+}

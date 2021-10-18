@@ -1,0 +1,8 @@
+.our-team-container {
+  background-color: #F36100;
+}
+
+.team-card:hover {
+  box-shadow: 5px 5px 0 #eee;
+  transition: 0.2s;
+}
