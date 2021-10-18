@@ -1,0 +1,12 @@
+.reg-title {
+  color: #F36100;
+}
+
+.reg-btn {
+  background-color: #F36100;
+  border: none;
+}
+
+.reg-btn:hover {
+  background-color: #d65600;
+}
