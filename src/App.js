@@ -11,38 +11,41 @@ import Footer from "./components/Shared/Footer/Footer";
 import Shop from "./components/Shop/Shop";
 import LogIn from "./components/LogIn/LogIn";
 import Register from "./components/Register/Register";
+import AuthProvider from "./contexts/AuthProvider";
 
 function App() {
   return (
     <div>
-      <Router>
-        <TopHeader></TopHeader>
-        <NavBar></NavBar>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/shop">
-            <Shop></Shop>
-          </Route>
-          <Route path="/login">
-            <LogIn></LogIn>
-          </Route>
-          <Route path="/register">
-            <Register></Register>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <TopHeader></TopHeader>
+          <NavBar></NavBar>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/shop">
+              <Shop></Shop>
+            </Route>
+            <Route path="/login">
+              <LogIn></LogIn>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
