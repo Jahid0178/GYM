@@ -10,3 +10,11 @@
 .reg-btn:hover {
   background-color: #d65600;
 }
+
+.back-login {
+  text-decoration: none;
+}
+
+.back-login:hover {
+  text-decoration: underline;
+}

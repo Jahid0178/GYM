@@ -3,6 +3,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   GithubAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -15,6 +17,8 @@ const useFirebase = () => {
   const auth = getAuth();
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState();
 
   // Provider
   const googleProvider = new GoogleAuthProvider();
@@ -36,6 +40,41 @@ const useFirebase = () => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleRegister = () => {
+    if (password.length < 6) {
+      setError("Password should be an 6 character or more");
+      return;
+    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        setUser(result.user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  const processAccount = () => {
+    console.log("this" + email);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        setUser(result.user);
+        setError("");
       })
       .catch((error) => {
         setError(error.message);
@@ -64,6 +103,10 @@ const useFirebase = () => {
     error,
     signInUsingGoogle,
     signInUsingGithub,
+    handleEmailChange,
+    handlePasswordChange,
+    handleRegister,
+    processAccount,
     logOut,
   };
 };

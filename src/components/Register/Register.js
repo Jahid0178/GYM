@@ -3,9 +3,17 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import "./Register.css";
 import registerImg from "../../images/register.svg";
 import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
 
 const Register = () => {
-  const { signInUsingGoogle, signInUsingGithub } = useAuth();
+  const {
+    signInUsingGoogle,
+    signInUsingGithub,
+    handleEmailChange,
+    handlePasswordChange,
+    handleRegister,
+    error,
+  } = useAuth();
   return (
     <div className="m-5">
       <Row>
@@ -20,17 +28,14 @@ const Register = () => {
         <Col>
           <h1 className="reg-title py-2">Register Your Account</h1>
           <Form onSubmit={(e) => e.preventDefault()}>
-            <Row>
-              <Col>
-                <Form.Control placeholder="First name" />
-              </Col>
-              <Col>
-                <Form.Control placeholder="Last name" />
-              </Col>
-            </Row>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                onBlur={handleEmailChange}
+                type="email"
+                placeholder="Enter email"
+                required
+              />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
               </Form.Text>
@@ -38,11 +43,20 @@ const Register = () => {
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                onBlur={handlePasswordChange}
+                type="password"
+                placeholder="Password"
+                required
+              />
             </Form.Group>
-            <Button className="reg-btn" type="submit">
-              Submit
+            <p className="text-danger">{error}</p>
+            <Button onClick={handleRegister} className="reg-btn" type="submit">
+              Register
             </Button>
+            <Link className="ms-2 back-login" to="/login">
+              Already have account?
+            </Link>
           </Form>
           <div className="text-center my-3">-----------OR-----------</div>
           <button className="btn btn-primary me-1" onClick={signInUsingGoogle}>
