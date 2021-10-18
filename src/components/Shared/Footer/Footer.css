@@ -1,0 +1,23 @@
+.footer-container {
+  color: #fff;
+  background-color: #202B6B;
+}
+
+.footer-logo {
+  width: 120px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.links {
+  color: #fff;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: #F36100;
+}

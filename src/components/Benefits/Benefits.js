@@ -15,13 +15,13 @@ const Benefits = () => {
   const mobileIcon = <FontAwesomeIcon icon={faMobile} />;
   const support = <FontAwesomeIcon icon={faHeadset} />;
   return (
-    <div className="benefits-container">
+    <div className="benefits-container pb-5">
       <Container>
         <h2 className="text-center py-2 my-5 fs-1 benefits-heading">
           Benefits Our GYM Center
         </h2>
         <Row>
-          <Col lg={6} sm={1} md={1} className="d-flex align-items-center">
+          <Col lg={3} sm={12} md={6} className="d-flex align-items-center">
             <div className="icon me-2">{dumbbellIcon}</div>
             <div>
               <h3>Instructional Videos</h3>
@@ -32,7 +32,7 @@ const Benefits = () => {
               </p>
             </div>
           </Col>
-          <Col lg={6} sm={1} md={1} className="d-flex align-items-center">
+          <Col lg={3} sm={12} md={6} className="d-flex align-items-center">
             <div className="icon me-2">{calendarIcon}</div>
             <div>
               <h3>Training Calendars</h3>
@@ -43,7 +43,7 @@ const Benefits = () => {
               </p>
             </div>
           </Col>
-          <Col lg={6} sm={1} md={1} className="d-flex align-items-center">
+          <Col lg={3} sm={12} md={6} className="d-flex align-items-center">
             <div className="icon me-2">{mobileIcon}</div>
             <div>
               <h3>Mobile App & Free WiFi</h3>
@@ -54,7 +54,7 @@ const Benefits = () => {
               </p>
             </div>
           </Col>
-          <Col lg={6} sm={1} md={1} className="d-flex align-items-center">
+          <Col lg={3} sm={12} md={6} className="d-flex align-items-center">
             <div className="icon me-2">{support}</div>
             <div>
               <h3>Community Support</h3>
