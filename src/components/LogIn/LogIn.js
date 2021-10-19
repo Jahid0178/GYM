@@ -5,16 +5,17 @@ import LoginImg from "../../images/login-img.svg";
 import useAuth from "../../hooks/useAuth";
 
 const LogIn = () => {
-  const { processAccount, handleEmailChange, handlePasswordChange, error } =
+  const [{ processAccount, handleEmailChange, handlePasswordChange, error }] =
     useAuth();
+
   return (
     <div className="my-5">
       <Container>
         <Row>
-          <Col>
+          <Col lg={6} md={12} sm={12}>
             <img src={LoginImg} alt="" className="img-fluid" />
           </Col>
-          <Col className="d-flex align-items-center">
+          <Col className="d-flex align-items-center" lg={6} md={12} sm={12}>
             <Form className="w-100" onSubmit={(e) => e.preventDefault()}>
               <h1 className="login-title py-3">Log In Your Account</h1>
               <Form.Group

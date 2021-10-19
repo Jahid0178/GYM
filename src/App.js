@@ -12,6 +12,8 @@ import Shop from "./components/Shop/Shop";
 import LogIn from "./components/LogIn/LogIn";
 import Register from "./components/Register/Register";
 import AuthProvider from "./contexts/AuthProvider";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
             <Route path="/shop">
               <Shop></Shop>
             </Route>
+            <PrivateRoute path="/product/:productId">
+              <ProductDetails></ProductDetails>
+            </PrivateRoute>
             <Route path="/login">
               <LogIn></LogIn>
             </Route>

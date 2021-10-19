@@ -1,0 +1,13 @@
+.pricing-container {
+  background: url(../../images/pricing.jpg);
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.card-container {
+  height: 550px;
+}
+
+.pricing-title {
+  color: #F36100;
+}

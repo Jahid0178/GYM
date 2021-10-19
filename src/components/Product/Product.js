@@ -1,24 +1,33 @@
 import React from "react";
-import { Card, CardGroup, Col } from "react-bootstrap";
+import { Card, CardGroup, Col, Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Product.css";
 
 const Product = (props) => {
-  const { name, brand, goal, price, img, rating } = props.product;
+  const { id, name, price, img, rating } = props.product;
   return (
     <>
       <Col lg={4} md={6} sm={12} className="my-3">
-        <CardGroup>
-          <Card>
-            <Card.Img variant="top" src={img} />
-            <Card.Body className="text-center">
-              <Card.Title>Name: {name}</Card.Title>
-              <Card.Text>Brand: {brand}</Card.Text>
-              <Card.Text>Goal: {goal}</Card.Text>
-              <Card.Text>Price: {price}</Card.Text>
-              <Card.Text>Rating: {rating}</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardGroup>
+        <Container fluid>
+          <CardGroup>
+            <Card className="card-container">
+              <Card.Img
+                variant="top"
+                src={img}
+                style={{ width: 250 }}
+                className="mx-auto"
+              />
+              <Card.Body className="text-center card-body text-white">
+                <Card.Title>Name: {name}</Card.Title>
+                <Card.Text>Price: {price}</Card.Text>
+                <Card.Text>Rating: {rating}</Card.Text>
+                <Link to={`/product/${id}`}>
+                  <Button className="btn detail-btn">Purchase</Button>
+                </Link>
+              </Card.Body>
+            </Card>
+          </CardGroup>
+        </Container>
       </Col>
     </>
   );

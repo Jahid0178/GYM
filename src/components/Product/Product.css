@@ -1,0 +1,17 @@
+.card-container:hover {
+  box-shadow: 4px 4px #F36100;
+}
+
+.card-body {
+  background-color: #F36100;
+}
+
+.detail-btn {
+  background-color: #fff;
+  color: #F36100;
+  border: none;
+}
+
+.detail-btn:hover {
+  color: #fff;
+}

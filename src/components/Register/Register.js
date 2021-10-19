@@ -4,20 +4,31 @@ import "./Register.css";
 import registerImg from "../../images/register.svg";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
+import { useHistory, useLocation } from "react-router";
 
 const Register = () => {
-  const {
-    signInUsingGoogle,
-    signInUsingGithub,
-    handleEmailChange,
-    handlePasswordChange,
-    handleRegister,
-    error,
-  } = useAuth();
+  const [
+    {
+      signInUsingGoogle,
+      signInUsingGithub,
+      handleEmailChange,
+      handlePasswordChange,
+      handleRegister,
+      error,
+    },
+  ] = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/product";
+  const handleGoogleLogin = () => {
+    signInUsingGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
   return (
     <div className="m-5">
       <Row>
-        <Col className="d-flex justify-content-center">
+        <Col className="d-flex justify-content-center" lg={6} md={12} sm={12}>
           <img
             src={registerImg}
             alt=""
@@ -25,7 +36,7 @@ const Register = () => {
             style={{ width: 350 }}
           />
         </Col>
-        <Col>
+        <Col lg={6} md={12} sm={12}>
           <h1 className="reg-title py-2">Register Your Account</h1>
           <Form onSubmit={(e) => e.preventDefault()}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -59,7 +70,7 @@ const Register = () => {
             </Link>
           </Form>
           <div className="text-center my-3">-----------OR-----------</div>
-          <button className="btn btn-primary me-1" onClick={signInUsingGoogle}>
+          <button className="btn btn-primary me-1" onClick={handleGoogleLogin}>
             Google Sign In
           </button>
           <button className="btn btn-primary ms-1" onClick={signInUsingGithub}>

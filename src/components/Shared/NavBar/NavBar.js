@@ -6,7 +6,7 @@ import logo from "../../../images/logo.webp";
 import useAuth from "../../../hooks/useAuth";
 
 const NavBar = () => {
-  const { user, logOut } = useAuth();
+  const [{ user, logOut }] = useAuth();
   return (
     <div>
       <Navbar bg="dark" variant="dark" expand="sm">
