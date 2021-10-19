@@ -11,7 +11,7 @@ const NavBar = () => {
     <div>
       <Navbar bg="dark" variant="dark" expand="sm">
         <Container fluid>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <img src={logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -25,6 +25,9 @@ const NavBar = () => {
               </NavLink>
               <NavLink className="nav-link" to="/shop">
                 Shop
+              </NavLink>
+              <NavLink className="nav-link" to="/contact">
+                Contact
               </NavLink>
               {user.email ? (
                 <NavLink className="nav-link" to="#" onClick={logOut}>

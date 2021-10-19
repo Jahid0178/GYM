@@ -14,6 +14,7 @@ import Register from "./components/Register/Register";
 import AuthProvider from "./contexts/AuthProvider";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             <PrivateRoute path="/product/:productId">
               <ProductDetails></ProductDetails>
             </PrivateRoute>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
             <Route path="/login">
               <LogIn></LogIn>
             </Route>

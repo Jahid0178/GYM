@@ -9,7 +9,7 @@ const Product = (props) => {
     <>
       <Col lg={4} md={6} sm={12} className="my-3">
         <Container fluid>
-          <CardGroup>
+          <CardGroup className="mx-2">
             <Card className="card-container">
               <Card.Img
                 variant="top"

@@ -12,7 +12,7 @@ const WhatIOffer = () => {
         <h1 className="offer-heading py-3 text-center mb-3">What I Offer</h1>
         <Row>
           <Col>
-            <Card style={{ width: "18rem" }} className="card-container">
+            <Card style={{ width: "18rem" }} className="card-containers">
               <Card.Img variant="top" src={offerImg1} className="offer-img" />
               <Card.Body className="offer-content text-center">
                 <Card.Title className="fs-3">Body Building</Card.Title>
@@ -24,7 +24,7 @@ const WhatIOffer = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }} className="card-container">
+            <Card style={{ width: "18rem" }} className="card-containers">
               <Card.Img variant="top" src={offerImg2} className="offer-img" />
               <Card.Body className="offer-content text-center">
                 <Card.Title className="fs-3">Muscle Gain</Card.Title>
@@ -36,7 +36,7 @@ const WhatIOffer = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: "18rem" }} className="card-container">
+            <Card style={{ width: "18rem" }} className="card-containers">
               <Card.Img variant="top" src={offerImg3} className="offer-img" />
               <Card.Body className="offer-content text-center">
                 <Card.Title className="fs-3">Weight Loss</Card.Title>
