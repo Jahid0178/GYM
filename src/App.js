@@ -15,6 +15,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Contact from "./components/Contact/Contact";
+import Trainer from "./components/Trainer/Trainer";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/shop">
               <Shop></Shop>
+            </Route>
+            <Route path="/trainer">
+              <Trainer></Trainer>
             </Route>
             <PrivateRoute path="/product/:productId">
               <ProductDetails></ProductDetails>
