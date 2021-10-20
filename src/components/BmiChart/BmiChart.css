@@ -1,0 +1,29 @@
+.bmi-container {
+  width: 100%;
+  background: url(../../images/bmi-bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.bmi-header {
+  color: #F36100;
+}
+
+th,
+td {
+  padding: 10px !important;
+}
+
+tr td {
+  color: #fff;
+}
+
+.calculate-btn {
+  background-color: #F36100;
+  border: none;
+  padding: 10px 40px;
+  transition: 0.5s;
+}
+
+.calculate-btn:hover {
+  background-color: #C41330;
+}
