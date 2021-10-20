@@ -15,7 +15,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Contact from "./components/Contact/Contact";
-import Trainer from "./components/Trainer/Trainer";
+import Trainer from "./pages/Trainer/Trainer";
 
 function App() {
   return (
