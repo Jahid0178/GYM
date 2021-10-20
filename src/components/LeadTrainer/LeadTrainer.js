@@ -28,21 +28,21 @@ const LeadTrainer = () => {
             <Card.Img variant="top" src={LeadTrainer1} />
             <Card.Body className="text-white text-center">
               <Card.Title>JHON STATHAM</Card.Title>
-              <Card.Text>Trainer</Card.Text>
+              <Card.Text>Lead Trainer</Card.Text>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={LeadTrainer2} />
             <Card.Body className="text-white text-center">
               <Card.Title>DAVID WILLIAM</Card.Title>
-              <Card.Text>Trainer</Card.Text>
+              <Card.Text>Lead Trainer</Card.Text>
             </Card.Body>
           </Card>
           <Card>
             <Card.Img variant="top" src={LeadTrainer3} />
             <Card.Body className="text-white text-center">
               <Card.Title>ROBERT DANY</Card.Title>
-              <Card.Text>Trainer</Card.Text>
+              <Card.Text>Lead Trainer</Card.Text>
             </Card.Body>
           </Card>
         </CardGroup>

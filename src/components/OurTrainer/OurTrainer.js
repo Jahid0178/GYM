@@ -32,7 +32,7 @@ const OurTrainer = () => {
                 </div>
                 <div>
                   <h3>JHON STATHAM</h3>
-                  <p>Trainer</p>
+                  <p>Lead Trainer</p>
                 </div>
               </div>
             </Col>
@@ -53,8 +53,8 @@ const OurTrainer = () => {
                   <img src={trainer3} alt="" />
                 </div>
                 <div>
-                  <h3>JHON SMITH</h3>
-                  <p>Trainer</p>
+                  <h3>ROBERT DANY</h3>
+                  <p>Lead Trainer</p>
                 </div>
               </div>
             </Col>
@@ -108,8 +108,8 @@ const OurTrainer = () => {
                   <img src={trainer8} alt="" />
                 </div>
                 <div>
-                  <h3>ANDRIO ALIS</h3>
-                  <p> Trainer</p>
+                  <h3>David William</h3>
+                  <p>Lead Trainer</p>
                 </div>
               </div>
             </Col>
