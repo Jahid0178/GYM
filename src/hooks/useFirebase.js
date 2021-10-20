@@ -31,13 +31,7 @@ const useFirebase = () => {
 
   // git hub
   const signInUsingGithub = () => {
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, githubProvider);
   };
 
   const handleEmailChange = (e) => {
@@ -101,6 +95,8 @@ const useFirebase = () => {
     handleRegister,
     processAccount,
     logOut,
+    setError,
+    setUser,
   };
 };
 

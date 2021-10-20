@@ -15,15 +15,34 @@ const Register = () => {
       handlePasswordChange,
       handleRegister,
       error,
+      setError,
+      setUser,
     },
   ] = useAuth();
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/product";
+  const redirect_uri = location.state?.from || "/home";
   const handleGoogleLogin = () => {
-    signInUsingGoogle().then((result) => {
-      history.push(redirect_uri);
-    });
+    signInUsingGoogle()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirect_uri);
+        setError("");
+      })
+      .catch((err) => {
+        setError(err);
+      });
+  };
+  const handleGithubLogin = () => {
+    signInUsingGithub()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirect_uri);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   return (
     <div className="m-5">
@@ -73,7 +92,7 @@ const Register = () => {
           <button className="btn btn-primary me-1" onClick={handleGoogleLogin}>
             Google Sign In
           </button>
-          <button className="btn btn-primary ms-1" onClick={signInUsingGithub}>
+          <button className="btn btn-primary ms-1" onClick={handleGithubLogin}>
             GitHub Sign In
           </button>
         </Col>
